@@ -1,17 +1,17 @@
 create sequence tagId
-start with 0
+start with 1
 increment by 1;
 
 create sequence softwareId
-start with 0
+start with 1
 increment by 1;
 
 create sequence userId
-start with 0
+start with 1
 increment by 1;
 
 create sequence transactionId
-start with 0
+start with 1
 increment by 1;
 
 --Tag (tagId, tagName, tagDescription)
@@ -97,3 +97,4 @@ insert into friendship values (1, 2);
 
 --Defined (softwareId, tagId)
 insert into defined values (1, 2);
+
