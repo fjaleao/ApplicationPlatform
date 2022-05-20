@@ -98,3 +98,4 @@ insert into friendship values (1, 2);
 --Defined (softwareId, tagId)
 insert into defined values (1, 2);
 
+--test commit
