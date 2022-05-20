@@ -35,17 +35,34 @@ insert into publisher values ('CD Projekt Red', 1994, 'Poland');
 insert into publisher values ('Codemasters', 1986, 'UK');
 insert into publisher values ('Deep Silver', 1889, 'Germany');
 insert into publisher values ('Dovetail Games', 2008, 'UK');
-insert into publisher values ('Nintendo', 1889, 'Japan');
 insert into publisher values ('Electronic Arts', 1982, 'USA');
+insert into publisher values ('Gameloft', 1999, 'France');
+insert into publisher values ('Konami', 1969, 'Japan');
+insert into publisher values ('Koch Media', 1994, 'Germany');
+insert into publisher values ('Microsoft', 1975, 'USA');
+insert into publisher values ('Nintendo', 1889, 'Japan');
+insert into publisher values ('PopCap Games', 2000, 'USA');
 insert into publisher values ('Rockstar Games', 1998, 'USA');
+insert into publisher values ('Rare', 1985, 'UK');
+insert into publisher values ('Riot Games', 2006, 'USA');
+insert into publisher values ('SCS Software', 1997, 'Czech Republic');
+insert into publisher values ('Sega', 1951, 'Japan');
+insert into publisher values ('SNK Corporation', 1978, 'Japan');
+insert into publisher values ('Sony Interactive Entertainment', 1993, 'USA');
+insert into publisher values ('Square Enix', 1975, 'Japan');
+insert into publisher values ('Square Enix Europe', 1990, 'UK');
+insert into publisher values ('Team17', 1990, 'UK');
+insert into publisher values ('Ubisoft', 1986, 'France');
+insert into publisher values ('Valve', 1996, 'USA');
+insert into publisher values ('Warner Bros. Interactive', 2004, 'USA');
 
 
 
 --Software (softwareId, softwareName, releaseDate, price, softwareDescription, classification, ageRating, publisherName)
-insert into software values (softwareId.nextval, 'The Sims 4', 2014.09.02, 19.99,  'The Sims 4 is a 2014 life simulation video game developed by Maxis and The Sims Studio and published by Electronic Arts. It focuses on its improved character creation and housebuilding tools, as well as deeper in-game simulation with the new emotion and personality systems for Sims.', 
-4.5, 12, 'Electronic Arts');
 insert into software values (softwareId.nextval, 'The Elder Scrolls Online', 2014.04.04, 19.99,  'The Elder Scrolls Online, abbreviated ESO, is a massively multiplayer online role-playing game (MMORPG) developed by ZeniMax Online Studios and published by Bethesda Softworks. The game is set in the continent of Tamriel and features a storyline indirectly connected with the other games in the Elder Scrolls franchise.', 
 4.7, 12, 'Bethesda Softworks');
+insert into software values (softwareId.nextval, 'The Sims 4', 2014.09.02, 19.99,  'The Sims 4 is a 2014 life simulation video game developed by Maxis and The Sims Studio and published by Electronic Arts. It focuses on its improved character creation and housebuilding tools, as well as deeper in-game simulation with the new emotion and personality systems for Sims.', 
+4.5, 12, 'Electronic Arts');
 insert into software values (softwareId.nextval, 'Legend of Zelda: Breath of the Wild', 2017.03.03, 19.99, 'The Legend of Zelda: Breath of the Wild is a 2017 action-adventure game developed and published by Nintendo for the Nintendo Switch and Wii U consoles. The game is an installment of The Legend of Zelda series and is set at the end of its timeline. The player controls an amnesiac Link, who awakens from a hundred-year slumber, and attempts to regain his memories and prevent the destruction of Hyrule by Calamity Ganon.'
 4.9, 10, 'Nintendo');
 insert into software values (softwareId.nextval, 'Animal Crossing: New Leaf', 2012.11.08, 19.99, 'Animal Crossing: New Leaf is a 2012 social simulation video game developed and published by Nintendo for the Nintendo 3DS console. In the game, the human character takes on the role of mayor in a town populated with anthropomorphic animals. While retaining gameplay from older titles, Animal Crossing: New Leaf marks a change in the series, as the player now becomes the mayor of the town. With the help of the townsfolk and a secretary it is now the players job to make the town a better place to live.', 
