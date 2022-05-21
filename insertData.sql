@@ -19,6 +19,7 @@ insert into tag values (tagId.nextval, 'Adventure', 'Software description for ad
 insert into tag values (tagId.nextval, 'Simulation', 'Software description for simulation');
 insert into tag values (tagId.nextval, 'Action', 'Software description for action');
 insert into tag values (tagId.nextval, 'Horror', 'Software description for herror');
+--insert into tag values (tagId.nextval, 'tagName', 'tagDescription');
 
 
 
@@ -55,10 +56,17 @@ insert into publisher values ('Team17', 1990, 'UK');
 insert into publisher values ('Ubisoft', 1986, 'France');
 insert into publisher values ('Valve', 1996, 'USA');
 insert into publisher values ('Warner Bros. Interactive', 2004, 'USA');
+--insert into publisher values ('name', YYYY, 'country');
 
 
 
 --Software (softwareId, softwareName, releaseDate, price, softwareDescription, classification, ageRating, publisherName)
+insert into software values (softwareId.nextval, 'Borderlands Game of the Year', 2009.10.20, 29.99,  'Lock, Load, & Face the Madness! Get ready for the mind blowing insanity! Play as one of four trigger-happy mercenaries and take out everything that stands in your way! With its addictive action, frantic first-person shooter combat, massive arsenal of weaponry, RPG elements and four-player co-op*, Borderlands is a breakthrough experience that challenges all the conventions of modern shooters. Borderlands places you in the role of a mercenary on the lawless and desolate planet of Pandora, hell-bent on finding a legendary stockpile of powerful alien technology known as The Vault.', 
+4.7, 18, '2K Games');
+insert into software values (softwareId.nextval, 'Borderlands 2', 2012.09.18, 29.99,  'A new era of shoot and loot is about to begin. Play as one of four new vault hunters facing off against a massive new world of creatures, psychos and the evil mastermind, Handsome Jack. Make new friends, arm them with a bazillion weapons and fight alongside them in 4 player co-op on a relentless quest for revenge and redemption across the undiscovered and unpredictable living planet.',
+4.8, 18, '2K Games');
+insert into software values (softwareId.nextval, 'Borderlands 3', 2020.03.13, 59.99,  'The original shooter-looter returns, packing bazillions of guns and an all-new mayhem-fueled adventure! Blast through new worlds and enemies as one of four brand new Vault Hunters – the ultimate treasure-seeking badasses of the Borderlands, each with deep skill trees, abilities, and customization. Play solo or join with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.',
+4.2, 18, '2k Games');
 insert into software values (softwareId.nextval, 'The Elder Scrolls Online', 2014.04.04, 19.99,  'The Elder Scrolls Online, abbreviated ESO, is a massively multiplayer online role-playing game (MMORPG) developed by ZeniMax Online Studios and published by Bethesda Softworks. The game is set in the continent of Tamriel and features a storyline indirectly connected with the other games in the Elder Scrolls franchise.', 
 4.7, 12, 'Bethesda Softworks');
 insert into software values (softwareId.nextval, 'The Sims 4', 2014.09.02, 19.99,  'The Sims 4 is a 2014 life simulation video game developed by Maxis and The Sims Studio and published by Electronic Arts. It focuses on its improved character creation and housebuilding tools, as well as deeper in-game simulation with the new emotion and personality systems for Sims.', 
@@ -71,6 +79,9 @@ insert into software values (softwareId.nextval, 'Animal Crossing: New Horizons'
 4.9, 3, 'Nintendo');
 insert into software values (softwareId.nextval, 'Grand Theft Auto V', 2013.09.17, 34.99, 'Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the seventh main entry in the Grand Theft Auto series, following 2008s Grand Theft Auto IV, and the fifteenth instalment overall. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three protagonists—retired bank robber Michael De Santa, street gangster Franklin Clinton, and drug dealer and gunrunner Trevor Philips—and their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals. The open world design lets players freely roam San Andreas open countryside and the fictional city of Los Santos, based on Los Angeles.',
 4.7, 18, 'Rockstar Games');
+/*insert into software values (softwareId.nextval, 'name', YYYY.MM.DD, E.C,  'description',
+classification, ageRating, 'publisher');        */
+
 
 
 
@@ -87,30 +98,37 @@ insert into userA values(userId.nextval, 'keyboardninja420@gmail.com', 'keyboard
 insert into userA values(userId.nextval, 'gilmariogamer33@gmail.com', 'gilmariogamer33', 'Gilmario Cossa', 1972.09.19, 'South Africa');
 insert into userA values(userId.nextval, 'theaussietrain@gmail.com', 'theaussietrain', 'Charlotte Wilson', 2008.08.05, 'Oceania');
 insert into userA values(userId.nextval, 'mualitheog@gmail.com', 'mualitheog', 'Muhammad Ali', 1962.11.25, 'Middle East');
+--insert into userA values(userId.nextval, 'name@domain.com', 'username', 'fullname', YYYY.MM.DD, 'region');
 
 
 --Transaction (transactionId, transactionDate, paymentType, recipientId, userId)
 insert into transactionA values (transactionId.nextval, 2022.05.19, 'PayPal', 2, 2);
 insert into transactionA values (transactionId.nextval, 2022.04.03, 'MBWay', 1, 4);
+--insert into transactionA values (transactionId.nextval, YYYY.MM.DD, 'paymentType', recipientId, userId);
 
 
 --Owns (userId, softwareId)
 insert into owns values (2, 2);
 insert into owns values (4, 3);
+--insert into owns values (userId, softwareId);
 
 --Review (userId, softwareId, reviewDescription, stars, reviewDate)
 insert into review values (1, 3, 'Very good game! :)', 4.5, 2022.04.05);
+--insert into review values (userId, softwareId, 'reviewDescription', stars, YYYY.MM.DD);
 
 --Has (transactionId, softwareId)
 insert into has values (1, 2);
 insert into has values(2, 3);
+--insert into has values (transactionId, softwareId);
 
 
 
 --Friendship (friend1, friend2) ***userId***
 insert into friendship values (1, 2);
+--insert into friendship values (friend1Id, friend2Id);
 
 
 
 --Defined (softwareId, tagId)
 insert into defined values (1, 2);
+--insert into defined values (softwareId, tagId);
