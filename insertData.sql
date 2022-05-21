@@ -15,15 +15,17 @@ start with 1
 increment by 1;
 
 --Tag (tagId, tagName, tagDescription)
-insert into tag values (tagId.nextval, 'Adventure', 'Software description for adventure');
-insert into tag values (tagId.nextval, 'Simulation', 'Software description for simulation');
+--ordem alfabetica de nome
 insert into tag values (tagId.nextval, 'Action', 'Software description for action');
+insert into tag values (tagId.nextval, 'Adventure', 'Software description for adventure');
 insert into tag values (tagId.nextval, 'Horror', 'Software description for horror');
+insert into tag values (tagId.nextval, 'Simulation', 'Software description for simulation');
 --insert into tag values (tagId.nextval, 'tagName', 'tagDescription');
 
 
 
 --Publisher (publisherName, foundingYear, country)
+--ordem alfabetica de nome
 insert into publisher values ('2K Games', 2005, 'USA');
 insert into publisher values ('Activision', 1979, 'USA');
 insert into publisher values ('Atari, SA', 2003, 'France');
@@ -61,10 +63,13 @@ insert into publisher values ('Warner Bros. Interactive', 2004, 'USA');
 
 
 --Software (softwareId, softwareName, releaseDate, price, softwareDescription, classification, ageRating, publisherName)
+--ordem alfabetica de publishers, dlc por baixo do respetivo jogo
 insert into software values (softwareId.nextval, 'Borderlands Game of the Year', 2009.10.20, 29.99,  'Lock, Load, & Face the Madness! Get ready for the mind blowing insanity! Play as one of four trigger-happy mercenaries and take out everything that stands in your way! With its addictive action, frantic first-person shooter combat, massive arsenal of weaponry, RPG elements and four-player co-op*, Borderlands is a breakthrough experience that challenges all the conventions of modern shooters. Borderlands places you in the role of a mercenary on the lawless and desolate planet of Pandora, hell-bent on finding a legendary stockpile of powerful alien technology known as The Vault.', 
 4.7, 18, '2K Games');
 insert into software values (softwareId.nextval, 'Borderlands 2', 2012.09.18, 29.99,  'A new era of shoot and loot is about to begin. Play as one of four new vault hunters facing off against a massive new world of creatures, psychos and the evil mastermind, Handsome Jack. Make new friends, arm them with a bazillion weapons and fight alongside them in 4 player co-op on a relentless quest for revenge and redemption across the undiscovered and unpredictable living planet.',
 4.8, 18, '2K Games');
+insert into software values (softwareId.nextval, 'Borderlands: The Pre-Sequel', YYYY.MM.DD, E.C,  'description',
+classification, ageRating, 'publisher');
 insert into software values (softwareId.nextval, 'Borderlands 3', 2020.03.13, 59.99,  'The original shooter-looter returns, packing bazillions of guns and an all-new mayhem-fueled adventure! Blast through new worlds and enemies as one of four brand new Vault Hunters – the ultimate treasure-seeking badasses of the Borderlands, each with deep skill trees, abilities, and customization. Play solo or join with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.',
 4.2, 18, '2k Games');
 insert into software values (softwareId.nextval, 'The Elder Scrolls Online', 2014.04.04, 19.99,  'The Elder Scrolls Online, abbreviated ESO, is a massively multiplayer online role-playing game (MMORPG) developed by ZeniMax Online Studios and published by Bethesda Softworks. The game is set in the continent of Tamriel and features a storyline indirectly connected with the other games in the Elder Scrolls franchise.', 
