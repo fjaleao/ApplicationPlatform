@@ -18,7 +18,7 @@ increment by 1;
 insert into tag values (tagId.nextval, 'Adventure', 'Software description for adventure');
 insert into tag values (tagId.nextval, 'Simulation', 'Software description for simulation');
 insert into tag values (tagId.nextval, 'Action', 'Software description for action');
-insert into tag values (tagId.nextval, 'Horror', 'Software description for herror');
+insert into tag values (tagId.nextval, 'Horror', 'Software description for horror');
 --insert into tag values (tagId.nextval, 'tagName', 'tagDescription');
 
 
