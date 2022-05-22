@@ -28,7 +28,10 @@ insert into tag values (tagId.nextval, 'Sports', 'A sports video game is a video
 insert into tag values (tagId.nextval, 'Compatible with Windows', 'This software is compatible with the Windows operating system.');
 insert into tag values (tagId.nextval, 'Compatible with Mac OS', 'This software is compatible with the Mac operating system.');
 insert into tag values (tagId.nextval, 'Compatible with Lunix/Unix', 'This software is compatible with the Lunix and Unix operating systems.');
-
+insert into tag values (tagId.nextval, 'RV Compatibility', 'In order to use this software, it is recommended that you have a virtual reality headset. Some examples are Valve Index, HTC Vive, Oculus Rift and Windows Mixed Reality.');
+insert into tag values (tagId.nextval, 'Controller Compatibility', 'You can use a controller to interact with this software.');
+insert into tag values (tagId.nextval, 'Single-player', 'This game is strongly or completely focused in a single-player gameplay.');
+insert into tag values (tagId.nextval, 'Multiplayer', 'This game is strongly or completely focused in a competitive/cooperative gameplay.');
 
 --insert into tag values (tagId.nextval, 'tagName', 'tagDescription');
 
