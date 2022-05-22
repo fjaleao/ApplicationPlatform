@@ -1,7 +1,7 @@
 create table tag (
     tagId number(3, 0),
     tagName varchar2(30),
-    tagDescription varchar2(200),
+    tagDescription varchar2(400),
     primary key(tagId)
 );
 
