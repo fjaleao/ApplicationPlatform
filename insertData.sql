@@ -110,17 +110,31 @@ classification, ageRating, 'publisher');        */
 
 
 --User (userId, email, username, fullName, birthDate, region)
-insert into userA values(userId.nextval, 'johnnyboy74@gmail.com', 'johnnyboy74', 'John Cooper Smith', 2004.01.02, 'North America');
-insert into userA values(userId.nextval, 'hellokitty6@gmail.com', 'hellokitty6', 'Andreia Alves', 1995.10.23, 'Western Europe');
-insert into userA values(userId.nextval, 'micwarriorxd@gmail.com', 'micwarriorXD', 'Miguel Francisco Rodrigues', 2006.07.15, 'South America');
-insert into userA values(userId.nextval, '1beastfigther1@gmail.com', '1beastfigther1', 'Rajesh Koothrappali', 1980.03.30, 'Central Asia');
-insert into userA values(userId.nextval, 'youssefthebest99@gmail.com', 'youssefthebest99', 'Youssef Alami', 1978.05.09, 'North Africa');
-insert into userA values(userId.nextval, 'davher909@gmail.com', 'davher909', 'David Hernández', 2002.07.26, 'Central America');
-insert into userA values(userId.nextval, 'dmitrikillall@gmail.com', 'dmitrikillall', 'Dmitri Smirnov', 1992.12.01, 'Eastern Europe');
-insert into userA values(userId.nextval, 'keyboardninja420@gmail.com', 'keyboardninja420', 'Zhang Wei', 2000.01.13, 'East Asia');
-insert into userA values(userId.nextval, 'gilmariogamer33@gmail.com', 'gilmariogamer33', 'Gilmario Cossa', 1972.09.19, 'South Africa');
+insert into userA values(userId.nextval, 'johnnyboy@gmail.com', 'johnnyboy74', 'John Cooper Smith', 2004.01.02, 'North America');
+insert into userA values(userId.nextval, 'hellokitty@sapo.pt', 'hellokitty6', 'Andreia Alves', 1995.10.23, 'Western Europe');
+insert into userA values(userId.nextval, 'micwarriorxd@sapo.pt', 'micwarriorXD', 'Miguel Francisco Rodrigues', 2006.07.15, 'South America');
+insert into userA values(userId.nextval, '1beastfigther@gmail.com', '1beastfigther1', 'Rajesh Koothrappali', 1980.03.30, 'Central Asia');
+insert into userA values(userId.nextval, 'youssefthebest@gmail.com', 'youssefthebest99', 'Youssef Alami', 1978.05.09, 'North Africa');
+insert into userA values(userId.nextval, 'davhergamer@gmail.com', 'davher909', 'David Hernández', 2002.07.26, 'Central America');
+insert into userA values(userId.nextval, 'franciscocunhadasilva@sapo.pt', 'franciscosilva', 'Francisco Cunha da Silva', 1969.11.20, 'Western Europe');
+insert into userA values(userId.nextval, 'dmitrikillall@sapo.pt', 'dmitrikillall', 'Dmitri Smirnov', 1992.12.01, 'Eastern Europe');
+insert into userA values(userId.nextval, 'keyboardninja@gmail.com', 'keyboardninja420', 'Zhang Wei', 2000.01.13, 'East Asia');
+insert into userA values(userId.nextval, 'gilmariogamer@gmail.com', 'gilmariogamer33', 'Gilmario Cossa', 1972.09.19, 'South Africa');
 insert into userA values(userId.nextval, 'theaussietrain@gmail.com', 'theaussietrain', 'Charlotte Wilson', 2008.08.05, 'Oceania');
 insert into userA values(userId.nextval, 'mualitheog@gmail.com', 'mualitheog', 'Muhammad Ali', 1962.11.25, 'Middle East');
+insert into userA values(userId.nextval, 'thegoldgirl@sapo.pt', 'thegoldgirl01', 'Liudmila Julia Holub', 1984.04.08, 'Eastern Europe');
+insert into userA values(userId.nextval, 'dieubeaofficial@sapo.pt', 'dieu_bea_official', 'Dieudonné Béatrice', 1979.05.02, 'Western Europe');
+insert into userA values(userId.nextval, 'narutoirl@gmail.com', 'narutoirlgamer', 'Shinju Tatsuya Suzuki', 1999.10.17, 'East Asia');
+insert into userA values(userId.nextval, 'minecraftislife@gmail.com', 'iloveminecraft3', 'Ntombi Bandile', 2003.09.18, 'South Africa');
+insert into userA values(userId.nextval, 'oliverpeakyshelby@gmail.com', 'darealpeaky666', 'Oliver Shelby', 2010.06.01, 'Oceania');
+insert into userA values(userId.nextval, 'anwershahdbusinessg@gmail.com', 'anwerbestfifaplayer', 'Anwer Shahd', 2005.04.13, 'Middle East');
+insert into userA values(userId.nextval, 'kateberryitb@gmail.com', 'berryinthebush59', 'Kate Bush Perry', 1993.03.24, 'North America');
+insert into userA values(userId.nextval, 'juangarciaper@sapo.pt', '1garciaelgato1', 'Juan García Pereira', 1994.07.03, 'Western Europe');
+insert into userA values(userId.nextval, 'whindthewind@sapo.pt', 'whindthewindbr', 'Whindersson Caetano', 1990.05.15, 'South America');
+insert into userA values(userId.nextval, 'samirranjit@gmail.com', 'samiruarebreakinthecar', 'Samir Ranjit', 1975.02.28, 'Central Asia');
+insert into userA values(userId.nextval, 'infamousnileguard@gmail.com', 'akiltheguard001', 'Akil Salah', 1988.10.09, 'North Africa');
+insert into userA values(userId.nextval, 'dacrazycubancigar@gmail.com', 'cuban7cigar', 'Veronica Benita Fredrick', 1997.01.16, 'Central America');
+insert into userA values(userId.nextval, 'karentherep@gmail.com', 'karenamerica50', 'Karen Texas', 1970.07.07, 'North America');
 --insert into userA values(userId.nextval, 'name@domain.com', 'username', 'fullname', YYYY.MM.DD, 'region');
 
 
