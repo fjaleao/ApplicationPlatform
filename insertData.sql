@@ -16,10 +16,20 @@ increment by 1;
 
 --Tag (tagId, tagName, tagDescription)
 --ordem alfabetica de nome
-insert into tag values (tagId.nextval, 'Action', 'Software description for action');
-insert into tag values (tagId.nextval, 'Adventure', 'Software description for adventure');
-insert into tag values (tagId.nextval, 'Horror', 'Software description for horror');
-insert into tag values (tagId.nextval, 'Simulation', 'Software description for simulation');
+insert into tag values (tagId.nextval, 'Action', 'An action game is a video game genre that emphasizes physical challenges, including hand–eye coordination and reaction-time. The genre includes a large variety of sub-genres, such as fighting games, beat ''em ups, shooter games, and platform games.');
+insert into tag values (tagId.nextval, 'Adventure', 'An adventure game is a video game in which the player assumes the role of a protagonist in an interactive story driven by exploration and/or puzzle-solving.[1] The genre''s focus on story allows it to draw heavily from other narrative-based media, literature and film, encompassing a wide variety of literary genres.');
+insert into tag values (tagId.nextval, 'Fighting', 'A fighting game (also known as versus fighting game) is a video game genre that involves combat between two (or more) players. Fighting game combat features mechanics such as blocking, grappling, counter-attacking, and chaining attacks together into "combos".');
+insert into tag values (tagId.nextval, 'Horror', 'A horror game is a video game genre centered on horror fiction and typically designed to scare the player. Unlike most other video game genres, which are classified by their gameplay, horror games are nearly always based on narrative or visual presentation, and use a variety of gameplay types.');
+insert into tag values (tagId.nextval, 'Simulation', 'A simulation game attempts to copy various activities from real life in the form of a game for various purposes such as training, analysis, prediction, or simply entertainment. Usually there are no strictly defined goals in the game, with the player instead allowed to control a character or environment freely.');
+insert into tag values (tagId.nextval, 'Racing', 'Racing games are a video game genre in which the player participates in a racing competition. They are distributed along a spectrum between more realistic racing simulations and more fantastical arcade-style racing games.');
+insert into tag values (tagId.nextval, 'Puzzle', 'Puzzle video games make up a broad genre of video games that emphasize puzzle solving. The types of puzzles can test problem-solving skills, including logic, pattern recognition, sequence solving, spatial recognition, and word completion.');
+insert into tag values (tagId.nextval, 'Strategy', 'Strategy is a major video game genre that emphasizes thinking and planning over direct instant action in order to achieve victory.[1] Although many types of video games can contain strategic elements, as a genre, strategy games are most commonly defined as those with a primary focus on high-level strategy, logistics and resource management.');
+insert into tag values (tagId.nextval, 'Sports', 'A sports video game is a video game that simulates the practice of sports. Most sports have been recreated with a game, including team sports, track and field, extreme sports, and combat sports.');
+insert into tag values (tagId.nextval, 'Compatible with Windows', 'This software is compatible with the Windows operating system.');
+insert into tag values (tagId.nextval, 'Compatible with Mac OS', 'This software is compatible with the Mac operating system.');
+insert into tag values (tagId.nextval, 'Compatible with Lunix/Unix', 'This software is compatible with the Lunix and Unix operating systems.');
+
+
 --insert into tag values (tagId.nextval, 'tagName', 'tagDescription');
 
 
