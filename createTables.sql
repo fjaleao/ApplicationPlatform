@@ -87,3 +87,29 @@ create table defined (
     foreign key(tagId) references tag(tagId),
     foreign key(softwareId) references software(softwareId)
 );
+
+create table expands (
+    basegame number(3,0),
+    dlc number(3,0), 
+    primary key(basegame, dlc),
+    foreign key(basegame) references software(softwareId),
+    foreign key(dlc) references software(softwareId)
+);
+
+create table thread (
+    threadId number(3, 0),
+    title varchar2(200, 0),
+    creationDate Date,
+    softwareId number(3, 0), 
+    primary key(threadId),
+    foreign key (softwareId) references software(softwareId) 
+);
+
+create table comments (
+    threadId number(3, 0),
+    userId number(3, 0),
+    textA varchar2(1000),
+    primary key(userId, threadId),
+    foreign key(userId) references userA(userId),
+    foreign key (threadId) references thread(threadId)
+);
