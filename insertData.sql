@@ -21,6 +21,7 @@ insert into tag values (tagId.nextval, 'Adventure', 'An adventure game is a vide
 insert into tag values (tagId.nextval, 'Fighting', 'A fighting game (also known as versus fighting game) is a video game genre that involves combat between two (or more) players. Fighting game combat features mechanics such as blocking, grappling, counter-attacking, and chaining attacks together into "combos".');
 insert into tag values (tagId.nextval, 'Horror', 'A horror game is a video game genre centered on horror fiction and typically designed to scare the player. Unlike most other video game genres, which are classified by their gameplay, horror games are nearly always based on narrative or visual presentation, and use a variety of gameplay types.');
 insert into tag values (tagId.nextval, 'Simulation', 'A simulation game attempts to copy various activities from real life in the form of a game for various purposes such as training, analysis, prediction, or simply entertainment. Usually there are no strictly defined goals in the game, with the player instead allowed to control a character or environment freely.');
+insert into tag values (tagId.nextval, 'RPG', 'A role-playing game is a game in which players assume the roles of characters in a fictional setting. Players take responsibility for acting out these roles within a narrative, either through literal acting or through a process of structured decision-making regarding character development.');
 insert into tag values (tagId.nextval, 'Racing', 'Racing games are a video game genre in which the player participates in a racing competition. They are distributed along a spectrum between more realistic racing simulations and more fantastical arcade-style racing games.');
 insert into tag values (tagId.nextval, 'Puzzle', 'Puzzle video games make up a broad genre of video games that emphasize puzzle solving. The types of puzzles can test problem-solving skills, including logic, pattern recognition, sequence solving, spatial recognition, and word completion.');
 insert into tag values (tagId.nextval, 'Strategy', 'Strategy is a major video game genre that emphasizes thinking and planning over direct instant action in order to achieve victory.[1] Although many types of video games can contain strategic elements, as a genre, strategy games are most commonly defined as those with a primary focus on high-level strategy, logistics and resource management.');
@@ -32,6 +33,7 @@ insert into tag values (tagId.nextval, 'RV Compatibility', 'In order to use this
 insert into tag values (tagId.nextval, 'Controller Compatibility', 'You can use a controller to interact with this software.');
 insert into tag values (tagId.nextval, 'Single-player', 'This game is strongly or completely focused in a single-player gameplay.');
 insert into tag values (tagId.nextval, 'Multiplayer', 'This game is strongly or completely focused in a competitive/cooperative gameplay.');
+
 
 --insert into tag values (tagId.nextval, 'tagName', 'tagDescription');
 
@@ -152,29 +154,70 @@ insert into userA values(userId.nextval, 'karentherep@gmail.com', 'karenamerica5
 
 
 --Transaction (transactionId, transactionDate, paymentType, recipientId, userId)
-insert into transactionA values (transactionId.nextval, 2022.05.19, 'PayPal', 2, 2);
-insert into transactionA values (transactionId.nextval, 2022.04.03, 'MBWay', 1, 4);
+insert into transactionA values (transactionId.nextval, 2022.04.19, 'PayPal', 2, 2);
+insert into transactionA values (transactionId.nextval, 2019.05.23, 'MBWay', 1, 4);
+insert into transactionA values (transactionId.nextval, 2020.06.07, 'MasterCard', 1, 1);
+insert into transactionA values (transactionId.nextval, 2020.06.03, 'MBWay', 1, 1);
+insert into transactionA values (transactionId.nextval, 2020.07.05, 'Visa', 4, 8);
+
+insert into transactionA values (transactionId.nextval, 2021.11.25, 'MasterCard', 9, 2);
+insert into transactionA values (transactionId.nextval, 2020.03.30, 'PaySafeCard', 3, 7);
+insert into transactionA values (transactionId.nextval, 2022.01.30, 'ATM', 2, 3);
+insert into transactionA values (transactionId.nextval, 2017.08.15, 'PayShop', 4, 5);
 --insert into transactionA values (transactionId.nextval, YYYY.MM.DD, 'paymentType', recipientId, userId);
 
 
 --Owns (userId, softwareId)
 insert into owns values (2, 2);
-insert into owns values (4, 3);
+insert into owns values (1, 3);
+insert into owns values (1, 6);
+insert into owns values (1, 10);
+insert into owns values (4, 9);
+insert into owns values (9, 14);
+insert into owns values (9, 15);
+insert into owns values (9, 16);
+insert into owns values (9, 17);
+insert into owns values (3, 18);
+insert into owns values (2, 17);
+insert into owns values (2, 19);
+insert into owns values (4, 8);
+insert into owns values (4, 19);
+
 --insert into owns values (userId, softwareId);
 
 --Review (userId, softwareId, reviewDescription, stars, reviewDate)
-insert into review values (1, 3, 'Very good game! :)', 4.5, 2022.04.05);
+insert into review values (1, 3, 'Very good game! :)', 4.5, to_date('2022.04.05', 'DD/MM/YYYY' 'YYY.MM.DD'));
 --insert into review values (userId, softwareId, 'reviewDescription', stars, YYYY.MM.DD);
 
 --Has (transactionId, softwareId)
-insert into has values (1, 2);
+insert into has values(1, 2);
 insert into has values(2, 3);
+insert into has values(3, 6);
+insert into has values(4, 10);
+insert into has values(5, 9);
+insert into has values(6, 14);
+insert into has values(6, 15);
+insert into has values(6, 16);
+insert into has values(6, 17);
+insert into has values(7, 18);
+insert into has values(8, 19);
+insert into has values(8, 18);
+insert into has values(9, 8);
+insert into has values(9, 19);
+
+
 --insert into has values (transactionId, softwareId);
 
 
 
 --Friendship (friend1, friend2) ***userId***
 insert into friendship values (1, 2);
+insert into friendship values (1, 4);
+insert into friendship values (1, 7);
+insert into friendship values (2, 3);
+insert into friendship values (2, 7);
+insert into friendship values (4, 2);
+insert into friendship values (7, 8);
 --insert into friendship values (friend1Id, friend2Id);
 
 
@@ -182,3 +225,9 @@ insert into friendship values (1, 2);
 --Defined (softwareId, tagId)
 insert into defined values (1, 2);
 --insert into defined values (softwareId, tagId);
+
+--Expands (basegame, dlc)
+insert into expands values(2,3);
+insert into expands values(4,5);
+insert into expands values(9,11);
+insert into expands values(9,11);
