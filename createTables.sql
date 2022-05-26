@@ -98,7 +98,7 @@ create table expands (
 
 create table thread (
     threadId number(3, 0),
-    title varchar2(200, 0),
+    title varchar2(200),
     creationDate Date,
     softwareId number(3, 0), 
     primary key(threadId),
