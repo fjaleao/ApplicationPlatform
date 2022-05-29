@@ -1,14 +1,38 @@
 create trigger age_restriction_trigger
-    after insert on transactionA
+    after insert on transactionTab
 	for each row
     declare RecipientAge number, AgeRating number;  
 	begin
-        select  into ageRating
+        select  into AgeRating
         from software
         if (RecepientAge < AgeRating)
             then Raise_Application_Error (-20100, 'A idade do destinatário do software é inferior à mínima para utilizá-lo. Transação não efetuada!');
         end if;
     end;
+/
+
+create view ageRatingSoftware 
+    select ageRating
+    from softwareTab inner join hasTab using (softwareId)
+                     inner join transactionTab using (transactionId)
+   
+
+
+
+create or replace view totalCred as
+    select numero, anoLetivo, sum(ects) as total
+    from inscricoes I natural join cadeiras
+    group by numero, anoLetivo;
+
+create or replace trigger verifica_limite
+  after insert on inscricoes
+  declare NumECTS number;
+  begin
+    select max(total) into NumECTS from totalCred;
+    if (NumECTS >  72)
+      then Raise_Application_Error (-20100, 'Atingiu o limite de créditos. Inscrição não aceite!');
+    end if;
+  end;
 /
 
 create trigger publisher_name_trigger
