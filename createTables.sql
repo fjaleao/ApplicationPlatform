@@ -2,15 +2,16 @@
 
 set define off;
 
-drop sequence tagidN;
-drop sequence softwareidN;
-drop sequence useridN;
-drop sequence transactionidN;
+drop sequence tagIdN;
+drop sequence softwareIdN;
+drop sequence userIdN;
+drop sequence transactionIdN;
+drop sequence threadIdN;
 
 drop table tagTab cascade constraints;
 drop table publisherTab cascade constraints;
 drop table softwareTab cascade constraints;
-drop table tabUser cascade constraints;
+drop table userTab cascade constraints;
 drop table transactionTab cascade constraints;
 drop table ownsTab cascade constraints;
 drop table reviewTab cascade constraints;
@@ -45,14 +46,13 @@ create table softwareTab (
     releaseDate Date,
     price number(6, 2),
     softwareDescription varchar2(1000),
-    classification number (2, 1),
     ageRating number(2, 0),
     publisherName varchar2(30),
     primary key(softwareId),
     foreign key(publisherName) references publisherTab(publisherName)
 );
 
-create table tabUser (
+create table userTab (
     userId number(3,0),
     email varchar2(320),
     username varchar2(30),
@@ -69,14 +69,14 @@ create table transactionTab (
     recipientId number(3, 0),
     userId number(3, 0),
     primary key(transactionId),
-    foreign key(userId) references tabUser(userId)
+    foreign key(userId) references userTab(userId)
 );
 
 create table ownsTab (
     userId number(3, 0),
     softwareId number(3, 0),
     primary key(userId, softwareId),
-    foreign key(userId) references tabUser(userId),
+    foreign key(userId) references userTab(userId),
     foreign key(softwareId) references softwareTab(softwareId)
 );
 
@@ -87,7 +87,7 @@ create table reviewTab (
     stars number(2,1),
     reviewDate Date,
     primary key(userId, softwareId),
-    foreign key(userId) references tabUser(userId),
+    foreign key(userId) references userTab(userId),
     foreign key(softwareId) references softwareTab(softwareId)
 );
 
@@ -103,13 +103,13 @@ create table friendshipTab (
     friend1 number(3, 0),
     friend2 number(3, 0),
     primary key(friend1, friend2),
-    foreign key(friend1) references tabUser(userId),
-    foreign key(friend2) references tabUser(userId)
+    foreign key(friend1) references userTab(userId),
+    foreign key(friend2) references userTab(userId)
 );
 
 create table definedTab (
-    softwareId number(3, 0),
     tagId number(3, 0),
+    softwareId number(3, 0),   
     primary key(tagId, softwareId),
     foreign key(tagId) references tagTab(tagId),
     foreign key(softwareId) references softwareTab(softwareId)
@@ -125,10 +125,12 @@ create table expandsTab (
 
 create table threadTab (
     threadId number(3, 0),
+    userId number(3, 0),
     title varchar2(200),
     creationDate Date,
     softwareId number(3, 0), 
     primary key(threadId),
+    foreign key(userId) references userTab(userId),
     foreign key (softwareId) references softwareTab(softwareId) 
 );
 
@@ -138,7 +140,7 @@ create table commentsTab (
     userId number(3, 0),
     textA varchar2(1000),
     primary key(userId, threadId),
-    foreign key(userId) references tabUser(userId),
+    foreign key(userId) references userTab(userId),
     foreign key (threadId) references threadTab(threadId)
 );
 
