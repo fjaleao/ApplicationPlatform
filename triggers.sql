@@ -1,12 +1,22 @@
-create trigger age_restriction_trigger
-    after insert on transactionTab
+--not working
+create or replace trigger age_restriction_trigger
+    before insert on transactionTab
 	for each row
-    declare RecipientAge number, AgeRating number;  
+    declare 
+        recipientAge number;
+        ageRating number;
 	begin
-        select  into AgeRating
-        from software
-        if (RecepientAge < AgeRating)
-            then Raise_Application_Error (-20100, 'A idade do destinatário do software é inferior à mínima para utilizá-lo. Transação não efetuada!');
+		--select months_between(trunc(sysdate), birthDate)/12 into recipientAge
+		--from transactionTab inner join userTab using(userId)
+		--where :new.recipientId = userTab.userId; 
+
+		select max(ageRating), months_between(trunc(sysdate), birthDate)/12
+        into ageRating, recipientAge
+		from transactionTab inner join userTab using(userId) join hasTab ht on(transactionTab.transactionId = ht.transactionId) using(transactionId) inner join softwareTab using(softwareId)
+		where :new.recipientId = userTab.userId and hasTab.softwareId = softwareTab.softwareId;
+
+        if (recipientAge < ageRating)
+            then Raise_Application_Error (-20100, 'The recipient''s age is smaller than the software''s minimum recommended age. Transaction failed!');
         end if;
     end;
 /
@@ -30,35 +40,73 @@ create or replace trigger verifica_limite
   begin
     select max(total) into NumECTS from totalCred;
     if (NumECTS >  72)
-      then Raise_Application_Error (-20100, 'Atingiu o limite de créditos. Inscrição não aceite!');
+      then Raise_Application_Error (-20100, '');
     end if;
   end;
 /
 
-create trigger publisher_name_trigger
-
-/
-
-create trigger software_name_trigger
-
-/
-
-create trigger payment_type_trigger
-
-/
-
-create trigger game_launched_trigger
-
-/
-
-
-create or replace trigger inscreve_novo_aluno
-	after insert on matriculas
-	for each row
+-- A funcionar! :)
+create or replace trigger publisher_name_trigger
+	before insert on publisherTab
+    for each row
+    declare repeatedTimes number;
 	begin
-		insert into inscricoes 
-      select :new.numero, curso, cadeira, to_number(extract(year from :new.dataMatr)), :new.dataMatr
-      from planos
-        
-  end;
+		select count(publisherName) into repeatedTimes
+		from publisherTab
+		where :new.publisherName = publisherName;
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20101, 'There''s already a publisher with that name. Publisher not added!');
+		end if;
+	end;
 /
+
+-- A funcionar! :)
+create or replace trigger software_name_trigger
+	before insert on softwareTab
+    for each row
+    declare repeatedTimes number;
+	begin
+		select count(softwareName) into repeatedTimes
+		from softwareTab
+		where :new.softwareName = softwareName;
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20102, 'There''s already a software/game/dlc with that name. Product not added!');
+		end if;
+	end;
+/
+
+-- A funcionar! :)
+create or replace trigger payment_type_trigger
+	before insert on transactionTab
+    for each row
+    declare repeatedTimes number;
+	begin
+		select count(paymentType) into repeatedTimes
+		from transactionTab
+		where :new.paymentType not in('PayPal', 'MBWay', 'MasterCard', 'Visa', 'PaySafeCard', 'ATM', 'Payshop');
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20103, 'Invalid payment type. Transaction failed!');
+		end if;
+	end;
+/
+
+-- (nao testado)
+create or replace trigger software_not_launched_trigger
+	before insert on transactionTab
+    for each row
+    declare repeatedTimes number;
+	begin
+		select count(*) into repeatedTimes
+		from transactionTab inner join ownsTab using(userId) inner join softwareTab using(softwareId)
+		where :new.transactionDate > releaseDate;
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20104, 'Software not launched yet. Transaction failed!');
+		end if;
+	end;
+/
+
+commit;
