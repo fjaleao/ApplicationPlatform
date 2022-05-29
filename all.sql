@@ -556,6 +556,7 @@ insert into threadTab values(threadIdN.nextval, 1, 'How can I increase fps in Th
 insert into threadTab values(threadIdN.nextval, 2,'How to get money fast in GTA5?', to_Date('2018.11.02', 'YYYY.MM.DD'), 19);
 insert into threadTab values(threadIdN.nextval, 1,'Are the Sims 4 expansion packs worth the money?', to_Date('2018.11.02', 'YYYY.MM.DD'), 15);
 
+commit;
 
 --insert into commentsTab values(threadId, userId, 'comment');
 insert into commentsTab values(1, 2, 'Just play with a lower resolution lol');
@@ -565,6 +566,10 @@ insert into commentsTab values(2, 4, 'If you''re a fan of microtransactions, the
 insert into commentsTab values(2, 6, 'I mean, are you talking about singleplayer or multiplayer?');
 insert into commentsTab values(3, 8, 'They are pretty good at spending your time. If you have lots of it, buy it ;)');
 
+commit;
+
+
+-- Queries
 
 
 -- Quais os usernames dos utilizadores que ofereceram um jogo com um dado nome? (nome = 'Grand Theft Auto V')
@@ -647,3 +652,80 @@ select softwareName, softwareDescription, price, releaseDate
 from softwareTab inner join transactions_num using (softwareId)
                  inner join publisherTab using (publisherName)
 where country = 'Portugal' and num > 0;
+
+
+-- Triggers
+
+
+create or replace trigger publisher_name_trigger
+	before insert on publisherTab
+    for each row
+    declare repeatedTimes number;
+	begin
+		select count(publisherName) into repeatedTimes
+		from publisherTab
+		where :new.publisherName = publisherName;
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20101, 'There''s already a publisher with that name. Publisher not added!');
+		end if;
+	end;
+/
+
+create or replace trigger software_name_trigger
+	before insert on softwareTab
+    for each row
+    declare repeatedTimes number;
+	begin
+		select count(softwareName) into repeatedTimes
+		from softwareTab
+		where :new.softwareName = softwareName;
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20102, 'There''s already a software/game/dlc with that name. Product not added!');
+		end if;
+	end;
+/
+
+commit;
+
+create or replace trigger payment_type_trigger
+	before insert on transactionTab
+    for each row
+    declare repeatedTimes number;
+	begin
+		select count(paymentType) into repeatedTimes
+		from transactionTab
+		where :new.paymentType not in('PayPal', 'MBWay', 'MasterCard', 'Visa', 'PaySafeCard', 'ATM', 'Payshop');
+
+		if (repeatedTimes > 0)
+			then Raise_Application_Error (-20103, 'Invalid payment type. Transaction failed!');
+		end if;
+	end;
+/
+
+--not working
+create or replace trigger age_restriction_trigger
+    before insert on transactionTab
+	for each row
+    declare 
+        recipientAge number;
+        ageRating number;
+	begin
+		--select months_between(trunc(sysdate), birthDate)/12 into recipientAge
+		--from transactionTab inner join userTab using(userId)
+		--where :new.recipientId = userTab.userId; 
+
+		select max(ageRating), months_between(trunc(sysdate), birthDate)/12
+        into ageRating, recipientAge
+		from transactionTab tt join userTab ut on(tt.userId = ut.userId) join hasTab ht on(tt.transactionId = ht.transactionId) join softwareTab sot on(ht.softwareId = sot.softwareId)
+		where :new.recipientId = ut.userId and ht.softwareId = sot.softwareId;
+
+        if (recipientAge < ageRating)
+            then Raise_Application_Error (-20100, 'The recipient''s age is smaller than the software''s minimum recommended age. Transaction failed!');
+        end if;
+    end;
+/
+
+commit;
+
