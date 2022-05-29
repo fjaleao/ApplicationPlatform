@@ -62,7 +62,7 @@ insert into publisherTab values ('Valve', 1996, 'USA');
 insert into publisherTab values ('Warner Bros. Interactive', 2004, 'USA');
 insert into publisherTab values ('Nerd Monkeys', 2013, 'Portugal');
 insert into publisherTab values ('Adobe', 1982, 'USA');
-insert into publisherTab values ('GIANTS Software', 2004, 'Portugal');
+insert into publisherTab values ('GIANTS Software', 2004, 'Switzerland');
 
 commit;
 --insert into publisherTab values ('name', YYYY, 'country');
