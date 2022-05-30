@@ -359,6 +359,9 @@ commit;
 --expandsTab (basegame, dlc)
 insert into expandsTab values(2, 3);
 insert into expandsTab values(4, 5);
+insert into expandsTab values(4, 6);
+insert into expandsTab values(4, 7);
+insert into expandsTab values(4, 8);
 insert into expandsTab values(9, 10);
 insert into expandsTab values(9, 11);
 insert into expandsTab values(20, 21);
