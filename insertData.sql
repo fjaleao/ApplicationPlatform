@@ -26,17 +26,16 @@ commit;
 --ordem alfabetica de nome
 insert into publisherTab values ('2K Games', 2005, 'USA');
 insert into publisherTab values ('Activision', 1979, 'USA');
----
-insert into publisherTab values ('Atari, SA', 2003, 'France');
-insert into publisherTab values ('Atarti, Inc', 1972, 'USA');
+insert into publisherTab values ('Atari', 2003, 'France');
 insert into publisherTab values ('Bandai Namco Entertainment', 2006, 'Japan');
 insert into publisherTab values ('Bethesda Softworks', 1986, 'USA');
 insert into publisherTab values ('Blizzard Entertainment', 1991, 'USA');
+---
 insert into publisherTab values ('Capcom', 1979, 'Japan');
 insert into publisherTab values ('CD Projekt Red', 1994, 'Poland');
 insert into publisherTab values ('Codemasters', 1986, 'UK');
-
 insert into publisherTab values ('Deep Silver', 1889, 'Germany');
+
 insert into publisherTab values ('Dovetail Games', 2008, 'UK');
 insert into publisherTab values ('Electronic Arts', 1982, 'USA');
 insert into publisherTab values ('Gameloft', 1999, 'France');
@@ -46,8 +45,8 @@ insert into publisherTab values ('Microsoft', 1975, 'USA');
 insert into publisherTab values ('Nintendo', 1889, 'Japan');
 insert into publisherTab values ('PopCap Games', 2000, 'USA');
 insert into publisherTab values ('Rockstar Games', 1998, 'USA');
-
 insert into publisherTab values ('Rare', 1985, 'UK');
+
 insert into publisherTab values ('Riot Games', 2006, 'USA');
 insert into publisherTab values ('SCS Software', 1997, 'Czech Republic');
 insert into publisherTab values ('Sega', 1951, 'Japan');
@@ -57,8 +56,8 @@ insert into publisherTab values ('Square Enix', 1975, 'Japan');
 insert into publisherTab values ('Square Enix Europe', 1990, 'UK');
 insert into publisherTab values ('Team17', 1990, 'UK');
 insert into publisherTab values ('Ubisoft', 1986, 'France');
-
 insert into publisherTab values ('Valve', 1996, 'USA');
+
 insert into publisherTab values ('Warner Bros. Interactive', 2004, 'USA');
 insert into publisherTab values ('Nerd Monkeys', 2013, 'Portugal');
 insert into publisherTab values ('Adobe', 1982, 'USA');
@@ -111,8 +110,43 @@ insert into softwareTab values (softwareIdN.nextval, 'Euro Truck Simulator 2 - S
 insert into softwareTab values (softwareIdN.nextval, 'American Truck Simulator', to_date('2016.02.02', 'YYYY.MM.DD'), 19.99, 'Experience legendary American trucks and deliver various cargoes across sunny California, sandy Nevada, and the Grand Canyon State of Arizona. American Truck Simulator takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the States.', 3, 'SCS Software');
 insert into softwareTab values (softwareIdN.nextval, 'Spyro Reignited Trilogy', to_date('2019.09.03', 'YYYY.MM.DD'), 39.99,  'The original roast master is back! Same sick burns, same smoldering attitude, now all scaled up in stunning HD. Spyro is bringing the heat like never before in the Spyro™ Reignited Trilogy game collection. Rekindle the fire with the original three games, Spyro™ the Dragon, Spyro™ 2: Ripto''s Rage! and Spyro™: Year of the Dragon. Explore the expansive realms, re-encounter the fiery personalities and relive the adventure in fully remastered glory. Because when there''s a realm that needs saving, there''s only one dragon to call.', 10, 'Activision');
 insert into softwareTab values (softwareIdN.nextval, 'Crash Bandicoot N. Sane Trilogy', to_date('2018.06.29', 'YYYY.MM.DD'), 39.99,  'Your favorite marsupial, Crash Bandicoot™, is back! He''s enhanced, entranced and ready-to-dance with the N. Sane Trilogy game collection. Now you can experience Crash Bandicoot like never before. Spin, jump, wump and repeat as you take on the epic challenges and adventures through the three games that started it all, Crash Bandicoot™, Crash Bandicoot™ 2: Cortex Strikes Back and Crash Bandicoot™ 3: Warped. Relive all your favorite Crash moments in their fully-remastered graphical glory and get ready to put some UMPH in your WUMP!', 10, 'Activision');
-insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
-insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'Tony Hawk''s Pro Skater 1 + 2', to_date('2021.06.25', 'YYYY.MM.DD'), 24.90,  'DROP BACK IN WITH THE MOST ICONIC SKATEBOARDING GAMES EVER MADE. PLAY TONY HAWK''S™ PRO SKATER™ & TONY HAWK''S™ PRO SKATER™ 2 IN ONE EPIC COLLECTION, REBUILT FROM THE GROUND UP IN INCREDIBLE HD. ALL THE PRO SKATERS, LEVELS AND TRICKS ARE BACK AND FULLY-REMASTERED, PLUS MORE.', 12, 'Activision');
+insert into softwareTab values (softwareIdN.nextval, 'Pong', to_date('1972.11.29', 'YYYY.MM.DD'), 0.0,  'Pong is a table tennis-themed twitch arcade sports video game, featuring simple two-dimensional graphics.', 3, 'Atari');
+insert into softwareTab values (softwareIdN.nextval, 'Space Invaders', to_date('1978.04.01', 'YYYY.MM.DD'), 0.0,  'Space Invaders is a 1978 shoot ''em up arcade game developed by Tomohiro Nishikado. It was manufactured and sold by Taito in Japan, and licensed to the Midway division of Bally for overseas distribution. Space Invaders was the first fixed shooter and set the template for the shoot ''em up genre.', 3, 'Atari');
+--40
+insert into softwareTab values (softwareIdN.nextval, 'Pacman', to_date('1980.05.22', 'YYYY.MM.DD'), 0.0,  'Pac-Man is a 1980 maze action video game developed and released by Namco for arcades. ', 3, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'Elden Ring', to_date('2022.02.24', 'YYYY.MM.DD'), 59.99,  'THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'JoJo''s Bizarre Adventure: All Star Battle', to_date('2013.08.29', 'YYYY.MM.DD'), 19.99,  'Many fans of JoJo''s Bizarre Adventure are captivated by Hirohiko Araki''s unique art style. JoJo''s Bizarre Adventure: All Star Battle R captures the passionate character expressions that are vintage JoJo, allowing you to experience the JoJo universe with powerful imagery as if Hirohiko Araki''s manga had come to life.', 12, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'SOULCALIBUR VI', to_date('2018.10.18', 'YYYY.MM.DD'), 59.99,  'Introducing the newest entry in the SOULCALIBUR series! Experience all-new gameplay mechanics with the most beautiful graphics the weapons-based fighting genre has ever seen!', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'SOULCALIBUR VI Season Pass', to_date('2018.10.18', 'YYYY.MM.DD'), 29.99,  'An affordable discount pass that includes 5 DLC packs.', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'SOULCALIBUR VI Season Pass 2', to_date('2019.11.25', 'YYYY.MM.DD'), 33.99,  'The second season pass for SOULCALIBUR VI features a collection of 8 DLC packs in one easy package.', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'TEKKEN 7', to_date('2017.06.01', 'YYYY.MM.DD'), 39.99,  'Discover the epic conclusion of the Mishima clan and unravel the reasons behind each step of their ceaseless fight. Powered by Unreal Engine 4, TEKKEN 7 features stunning story-driven cinematic battles and intense duels that can be enjoyed with friends and rivals alike through innovative fight mechanics. Love, Revenge, Pride. Everyone has a reason to fight. Values are what define us and make us human, regardless of our strengths and weaknesses. There are no wrong motivations, just the path we choose to take.', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'TEKKEN 7 Season Pass', to_date('2017.06.01', 'YYYY.MM.DD'), 24.99,  'Expand your fighter''s journey with the TEKKEN 7 Season Pass and gain access to stunning DLC packs at a discounted price. Challenge your skills, your friends and rivals with two additional playable characters, a new game mode and hundreds of additional costumes. As an exclusive gift for purchase, receive over 30 metallic costumes for your characters and shine in the Iron Fist Tournament!', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'TEKKEN 7 Season Pass 2', to_date('2018.09.05', 'YYYY.MM.DD'), 29.99,  'The second season pass for TEKKEN 7, featuring a collection of different downloadable content bundled together at a discounted price!', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'TEKKEN 7 Season Pass 3', to_date('2019.09.09', 'YYYY.MM.DD'), 24.99,  'The third season pass for TEKKEN 7 featuring a collection of different downloadable content bundled together at a discounted price!', 16, 'Bandai Namco Entertainment');
+--50
+insert into softwareTab values (softwareIdN.nextval, 'TEKKEN 7 Season Pass 4', to_date('2020.11.10', 'YYYY.MM.DD'), 19.99,  'The fourth season pass for TEKKEN 7, featuring a collection of different downloadable content bundled together at a discounted price!', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'DARK SOULS III', to_date('2016.04.11', 'YYYY.MM.DD'), 59.99,  'DARK SOULS™ III continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. As fires fade and the world falls into ruin, journey into a universe filled with more colossal enemies and environments. Players will be immersed into a world of epic atmosphere and darkness through faster gameplay and amplified combat intensity. Fans and newcomers alike will get lost in the game hallmark rewarding gameplay and immersive graphics. Now only embers remain… Prepare yourself once more and Embrace The Darkness!', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'DARK SOULS III - The Ringed City', to_date('2017.03.27', 'YYYY.MM.DD'), 14.99,  'Fear not, the dark, ashen one. The Ringed City is the final DLC pack for Dark Souls III - an award-winning, genre-defining Golden Joystick Awards 2016 Game of the year RPG. Journey to the world''s end to search for the Ringed City and encounter new lands, new bosses, new enemies with new armor, magic and items. Experience the epic final chapter of a dark world that could only be created by the mind of Hidetaka Miyazaki. A New World. One Last Journey.', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'DARK SOULS III - Ashes of Ariandel', to_date('2016.10.24', 'YYYY.MM.DD'), 14.99,  'You, are the unkindled. As part of the Dark Souls™ III Season Pass, expand your Dark Souls™ III experience with the Ashes of Ariandel™ DLC pack. Journey to the snowy world of Ariandel and encounter new areas, bosses, enemies, weapons, armor set, magic spells and more. Will you accept the challenge and embrace the darkness once more?', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'DARK SOULS III - Season Pass', to_date('2016.06.01', 'YYYY.MM.DD'), 24.99,  'Winner of gamescom award 2015 "Best RPG" and over 35 E3 2015 Awards and Nominations, DARK SOULS™ III leads you once again into a challenging world of ruin and despair. Expand your DARK SOULS™ III experience with the Season Pass and gain access to 2 epic DLC packs at a discounted price. Challenge yourself with new maps, bosses, enemies and additional weapon and armor sets. Prepare yourself once more and embrace the darkness.', 16, 'Bandai Namco Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 3', to_date('2008.10.28', 'YYYY.MM.DD'), 9.99,  'Vault-Tec engineers have worked around the clock on an interactive reproduction of Wasteland life for you to enjoy from the comfort of your own vault. Included is an expansive world, unique combat, shockingly realistic visuals, tons of player choice, and an incredible cast of dynamic characters. Every minute is a fight for survival against the terrors of the outside world — radiation, Super Mutants, and hostile mutated creatures. From Vault-Tec, America''s First Choice in Post Nuclear Simulation.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 3 - Operation Anchorage', to_date('2010.07.16', 'YYYY.MM.DD'), 4.99,  'Enter a military simulation and fight in one of the greatest battles of the Fallout universe - the liberation of Anchorage, Alaska from its Chinese Communist invaders.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 3 - Broken Steel', to_date('2010.07.16', 'YYYY.MM.DD'), 4.99,  'You may have dealt the Enclave a serious blow at Project Purity, but their forces are still out there, and still pose a grave threat to the people and security of the Capital Wasteland. In Broken Steel, you''ll continue your current Fallout 3 character past the events of Project Purity, and work with the Brotherhood of Steel to eradicate the Enclave threat once and for all. You''ll travel to new locations like the Olney Powerworks, wield destructive new weapons like the Tesla Cannon, fight powerful new creatures like the Super Mutant Overlord, marvel at the destructive power of Liberty Prime, earn new Perks like the devastating Nuclear Anomaly… and play Fallout 3 all the way to level 30!', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 3 - The Pitt', to_date('2010.07.16', 'YYYY.MM.DD'), 4.99,  'Explore a sprawling settlement ravaged by time, neglect, nuclear radiation, and moral degradation. The Pitt is filled with morally grey choices, shady NPCs, new enemies, new weapons, and much more.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 3 - Mothership Zeta', to_date('2010.07.16', 'YYYY.MM.DD'), 4.99,  'Defy hostile alien abductors and fight your way off of the massive Mothership Zeta, orbiting Earth miles above the Capital Wasteland. Mothership Zeta takes Fallout 3 in an entirely new direction - outer space. Meet new characters and join with them in a desperate bid to escape the Aliens'' clutches. To do so, you''ll wield powerful new weapons, like the Alien Atomizer, Alien Disintegrator, and Drone Cannon, and deck yourself out in brand new outfits, like the Gemini-Era Spacesuit and even Samurai Armor.', 18, 'Bethesda Softworks');
+--60
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 3 - Point Lookout', to_date('2010.07.16', 'YYYY.MM.DD'), 4.99,  'Buy a ticket and hop onboard the Duchess Gambit, as Tobar the Ferryman takes you to the strange seaside town of Point Lookout. What secrets does the dilapidated boardwalk hold? Who lives in the sprawling mansion? Why is the Punga Fruit so important? And what horrors lie in the depths of the murky swamp? Point Lookout is the most open-ended DLC yet, and allows you to explore an entirely new and expansive gameplay area any way you''d like. A completely new quest line allows you uncover the town''s hidden secrets, and wield powerful new weapons like the Double-Barrel Shotgun against the swamp''s dangerous, and deformed, denizens. So venture to Point Lookout, if you dare. Just pray it''s not a one-way trip.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout New Vegas', to_date('2010.10.22', 'YYYY.MM.DD'), 9.99,  'Welcome to Vegas. New Vegas. It''s the kind of town where you dig your own grave prior to being shot in the head and left for dead…and that''s before things really get ugly. It''s a town of dreamers and desperados being torn apart by warring factions vying for complete control of this desert oasis. It''s a place where the right kind of person with the right kind of weaponry can really make a name for themselves, and make more than an enemy or two along the way. As you battle your way across the heat-blasted Mojave Wasteland, the colossal Hoover Dam, and the neon drenched Vegas Strip, you''ll be introduced to a colorful cast of characters, power-hungry factions, special weapons, mutated creatures and much more. Choose sides in the upcoming war or declare “winner takes all” and crown yourself the King of New Vegas in this follow-up to the 2008 videogame of the year, Fallout 3. Enjoy your stay.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout New Vegas - Dead Money', to_date('2011.02.21', 'YYYY.MM.DD'), 4.99,  'As the victim of a raw deal you must work alongside three other captured wastelanders to recover the legendary treasure of the Sierra Madre Casino. In Dead Money, your life hangs in the balance as you face new terrain, foes, and choices. It is up to you how you play your cards in the quest to survive.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout New Vegas - Honest hearts', to_date('2011.05.17', 'YYYY.MM.DD'), 4.99,  'An expedition into the unspoiled wilderness of Utah''s Zion National Park goes horribly wrong when your caravan is ambushed by a tribal raiding band. As you try to find a way back to the Mojave you become embroiled in a war between tribes and a conflict between a New Canaanite missionary and the mysterious Burned Man. The decisions you make will determine the fate of Zion.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout New Vegas - Old World Blues', to_date('2011.07.19', 'YYYY.MM.DD'), 4.99,  'The residents of the Mojave have long assumed the trackless wastes of the ''Big Empty'' are a no-man''s-land, a desolate stretch where no living thing can survive. In Old World Blues, you discover that it is anything but... After being transported to the Big MT research crater, you find you''re the only hope of saving the Think Tank - the strange group of post-human researchers who inhabit the facility. They enlist your aid to save them from their own experiments - experiments that have gone horribly out of control. As you explore the huge stretch of the Big MT crater and its many underground labs, you''ll confront strange mutated animals, battle terrifying new atomic robots, and discover a new home base to call your own. Recover all the weapons, armor, and tech of the Pre-War era and use them to help save all of Science!', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout New Vegas - Lonesome World', to_date('2011.09.20', 'YYYY.MM.DD'), 4.99,  'In Lonesome Road you are contacted by the original Courier Six, a man by the name of Ulysses who refused to deliver the Platinum Chip at the start of Fallout: New Vegas. Ulysses promises the answer as to why he didn''t take the job,but only if you make one last journey into the hurricane-swept canyons of the Divide, a landscape torn apart by earthquakes and violent storms. It''s up to you whether you take the job or not. The road to the Divide is a long and treacherous one, and of the few to ever walk the road, none have ever returned. Is finding answers to your own past worth the risk? Bring all your gear, all your weapons, but leave your companions behind...this is one road you must walk alone.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Fallout 76', to_date('2020.04.14', 'YYYY.MM.DD'), 39.99,  'Bethesda Game Studios, the award-winning creators of Skyrim and Fallout 4, welcome you to Fallout 76. Twenty-five years after the bombs fall, you and your fellow Vault Dwellers—chosen from the nation''s best and brightest - emerge into post-nuclear America on Reclamation Day, 2102. Play solo or join together as you explore, quest, build, and triumph against the wasteland''s greatest threats. Explore a vast wasteland, devastated by nuclear war, in this open-world multiplayer addition to the Fallout story. Experience the largest, most dynamic world ever created in the legendary Fallout universe.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'DOOM 3', to_date('2007.08.03', 'YYYY.MM.DD'), 4.99,  'A massive demonic invasion has overwhelmed the Union Aerospace Corporation''s (UAC) Mars Research Facility, leaving only chaos and horror in its wake. As one of only a few survivors, you must fight your way to hell and back against a horde of evil monsters. The path is dark and dangerous, but you''ll have an array of weapons--including a pistol, a chainsaw, grenades, and more--to use for protection.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'DOOM', to_date('2016.05.13', 'YYYY.MM.DD'), 19.99,  'You''ve come here for a reason. The Union Aerospace Corporation''s massive research facility on Mars is overwhelmed by fierce and powerful demons, and only one person stands between their world and ours. As the lone DOOM Marine, you''ve been activated to do one thing - kill them all.', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'DOOM Eternal', to_date('2020.03.20', 'YYYY.MM.DD'), 39.99,  'Hell''s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity.', 18, 'Bethesda Softworks');
+--70
 
 commit;
 
@@ -370,12 +404,30 @@ insert into expandsTab values(9, 11);
 insert into expandsTab values(20, 21);
 insert into expandsTab values(20, 22);
 insert into expandsTab values(25, 26);
+
 insert into expandsTab values(25, 27);
 insert into expandsTab values(25, 28);
 insert into expandsTab values(25, 29);
-
 insert into expandsTab values(32, 33);
 insert into expandsTab values(32, 34);
+insert into expandsTab values(47, 48);
+insert into expandsTab values(47, 49);
+insert into expandsTab values(47, 50);
+insert into expandsTab values(47, 51);
+insert into expandsTab values(52, 53);
+
+insert into expandsTab values(52, 54);
+insert into expandsTab values(52, 55);
+insert into expandsTab values(56, 57);
+insert into expandsTab values(56, 58);
+insert into expandsTab values(56, 59);
+insert into expandsTab values(56, 60);
+insert into expandsTab values(56, 61);
+insert into expandsTab values(62, 63);
+insert into expandsTab values(62, 64);
+insert into expandsTab values(62, 65);
+insert into expandsTab values(62, 66);
+
 
 commit;
 
