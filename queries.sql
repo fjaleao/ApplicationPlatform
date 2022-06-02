@@ -1,3 +1,13 @@
+create or replace function calc_classification(software_id number) return number
+  is classification number;
+begin
+    select avg(stars) into classification
+    from reviewTab
+    where reviewTab.softwareId = software_id;
+  return classification;
+end  calc_classification;
+/
+
 -- Quais os usernames dos utilizadores que ofereceram um jogo com um dado nome? (nome = 'Grand Theft Auto V')
 SELECT username
 FROM userTab inner join transactionTab using (userId) 
@@ -7,18 +17,15 @@ WHERE softwareName = 'Grand Theft Auto V' and recipientId != userId;
 
 
 -- Quais os nomes e classificações dos jogos da plataforma categorizados como compatíveis para Windows 
---(tag), de simulação (tag) e com uma dada classificação etária? (classificação etária = 12) (mostra
--- apenas aqueles que ja se encontram classsificados)  
- 
-(select softwareName, classification
-from softwareTab inner join classifications using(softwareId)
-                 inner join definedTab using (softwareId)
+--(tag), de simulação (tag) e com uma dada classificação etária? (classificação etária = 12)
+
+(select softwareName, calc_classification(softwareId)as classification
+from softwareTab  inner join definedTab using (softwareId)
                   inner join tagTab using (tagId)
 where tagName = 'Compatible with Windows' and ageRating <= 12)
 intersect
-(select softwareName, classification
-from softwareTab inner join classifications using(softwareId)
-                 inner join definedTab using (softwareId)
+(select softwareName, calc_classification(softwareId) as classification
+from softwareTab inner join definedTab using (softwareId)
                  inner join tagTab using (tagId)
 where tagName = 'Simulation' and ageRating <= 12);
  
@@ -35,16 +42,14 @@ from transactions_num inner join userTab using (userId)
 where num in (select max(num) from transactions_num)
 ;
 
+
 -- Qual o nome do jogo associado à DLC com a melhor classificação na plataforma?
 
-create view classifications as
-    with reviewed as (
-        select softwareId, avg(stars) as classification
-        from reviewTab
-        group by softwareId
-    )
+create or replace view classifications as
+    select softwareId, calc_classification(softwareId)as classification
+    from reviewTab
+    group by softwareId
 ;
-
 
 create view dlcs as (
     select dlc
@@ -78,3 +83,5 @@ select softwareName, softwareDescription, price, releaseDate
 from softwareTab inner join transactions_num using (softwareId)
                  inner join publisherTab using (publisherName)
 where country = 'Portugal' and num > 0;
+
+
