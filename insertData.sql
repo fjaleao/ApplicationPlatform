@@ -30,25 +30,25 @@ insert into publisherTab values ('Atari', 2003, 'France');
 insert into publisherTab values ('Bandai Namco Entertainment', 2006, 'Japan');
 insert into publisherTab values ('Bethesda Softworks', 1986, 'USA');
 insert into publisherTab values ('Blizzard Entertainment', 1991, 'USA');
----
 insert into publisherTab values ('Capcom', 1979, 'Japan');
+---por introduzir
 insert into publisherTab values ('CD Projekt Red', 1994, 'Poland');
 insert into publisherTab values ('Codemasters', 1986, 'UK');
+---por introduzir ou apagar mm
 insert into publisherTab values ('Deep Silver', 1889, 'Germany');
 
 insert into publisherTab values ('Dovetail Games', 2008, 'UK');
 insert into publisherTab values ('Electronic Arts', 1982, 'USA');
-insert into publisherTab values ('Gameloft', 1999, 'France');
 insert into publisherTab values ('Konami', 1969, 'Japan');
-insert into publisherTab values ('Koch Media', 1994, 'Germany');
 insert into publisherTab values ('Microsoft', 1975, 'USA');
+---
 insert into publisherTab values ('Nintendo', 1889, 'Japan');
 insert into publisherTab values ('PopCap Games', 2000, 'USA');
 insert into publisherTab values ('Rockstar Games', 1998, 'USA');
 insert into publisherTab values ('Rare', 1985, 'UK');
-
 insert into publisherTab values ('Riot Games', 2006, 'USA');
 insert into publisherTab values ('SCS Software', 1997, 'Czech Republic');
+
 insert into publisherTab values ('Sega', 1951, 'Japan');
 insert into publisherTab values ('SNK Corporation', 1978, 'Japan');
 insert into publisherTab values ('Sony Interactive Entertainment', 1993, 'USA');
@@ -57,9 +57,9 @@ insert into publisherTab values ('Square Enix Europe', 1990, 'UK');
 insert into publisherTab values ('Team17', 1990, 'UK');
 insert into publisherTab values ('Ubisoft', 1986, 'France');
 insert into publisherTab values ('Valve', 1996, 'USA');
-
 insert into publisherTab values ('Warner Bros. Interactive', 2004, 'USA');
 insert into publisherTab values ('Nerd Monkeys', 2013, 'Portugal');
+
 insert into publisherTab values ('Adobe', 1982, 'USA');
 insert into publisherTab values ('GIANTS Software', 2004, 'Switzerland');
 
@@ -147,6 +147,42 @@ insert into softwareTab values (softwareIdN.nextval, 'DOOM 3', to_date('2007.08.
 insert into softwareTab values (softwareIdN.nextval, 'DOOM', to_date('2016.05.13', 'YYYY.MM.DD'), 19.99,  'You''ve come here for a reason. The Union Aerospace Corporation''s massive research facility on Mars is overwhelmed by fierce and powerful demons, and only one person stands between their world and ours. As the lone DOOM Marine, you''ve been activated to do one thing - kill them all.', 18, 'Bethesda Softworks');
 insert into softwareTab values (softwareIdN.nextval, 'DOOM Eternal', to_date('2020.03.20', 'YYYY.MM.DD'), 39.99,  'Hell''s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity.', 18, 'Bethesda Softworks');
 --70
+insert into softwareTab values (softwareIdN.nextval, 'DOOM Eternal: The Antient Gods - Part One', to_date('2020.10.20', 'YYYY.MM.DD'), 19.99,  'description', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'DOOM Eternal: The Antient Gods - Part One', to_date('2021.03.18', 'YYYY.MM.DD'), 19.99,  'description', 18, 'Bethesda Softworks');
+insert into softwareTab values (softwareIdN.nextval, 'Diablo III', to_date('2012.05.15', 'YYYY.MM.DD'), 19.99,  'Diablo III is a hack-and-slash action role-playing game developed and published by Blizzard Entertainment as the third installment in the Diablo franchise.', 16, 'Blizzard Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'Overwatch', to_date('2016.05.03', 'YYYY.MM.DD'), 14.99,  'Overwatch is a colorful team-based action game starring a diverse cast of powerful heroes. Travel the world, build a team, and contest objectives in exhilarating 6v6 combat.', 12, 'Blizzard Entertainment');
+insert into softwareTab values (softwareIdN.nextval, 'Cyberpunk 2077', to_date('2020.12.10', 'YYYY.MM.DD'), 59.99,  'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped up in a do-or-die fight for survival. Improved and featuring all-new free additional content, customize your character and playstyle as you take on jobs, build a reputation, and unlock upgrades. The relationships you forge and the choices you make will shape the story and the world around you. Legends are made here. What will yours be?', 18, 'CD Projekt Red');
+insert into softwareTab values (softwareIdN.nextval, 'Saints Row IV', to_date('2013.08.23', 'YYYY.MM.DD'), 14.99,  'The US President must save the Earth from alien overlord Zinyak using an arsenal of superpowers and strange weapons in the wildest open world game ever. The epic conclusion to the game that changed all the rules! The Saints have gone from the crackhouse to the White House—but the Earth has been invaded and it''s up to you to free the world from Overlord Zinyak and his alien empire. With homies new and old by your side, and an arsenal of superpowers and strange weapons, you must save the world in the wildest open world game ever!', 18, 'Deep Silver');
+insert into softwareTab values (softwareIdN.nextval, 'Saints Row IV: Season Pass', to_date('2013.08.20', 'YYYY.MM.DD'), 4.99,  'Get the best Saints Row IV has to offer (don''t tell the other packs we said that). Season Pass includes two mission add-on packs and the ultimate weapon in the alien arsenal: the Rectifier.', 18, 'Deep Silver');
+insert into softwareTab values (softwareIdN.nextval, 'Dead Island Definitive Edition', to_date('2016.05.31', 'YYYY.MM.DD'), 19.99,  'Welcome to the zombie apocalypse experience of a lifetime - and now more beautiful than ever. Caught in the midst of an epic zombie outbreak on the tropical island of Banoi, your only thought is: Survive!', 18, 'Deep Silver');
+insert into softwareTab values (softwareIdN.nextval, 'Train Sim World 2', to_date('2020.08.20', 'YYYY.MM.DD'), 17.99,  'The evolution of train simulation! Master iconic locomotives on high-speed services, long freight hauls or precise commuter traffic, and get creative with customisation tools in this advanced sequel. Climb into the cab in Train Sim World 2.', 3, 'Dovetail Games');
+insert into softwareTab values (softwareIdN.nextval, 'It takes Two', to_date('2021.03.26', 'YYYY.MM.DD'), 14.99,  'Embark on the craziest journey of your life in It Takes Two, a genre-bending platform adventure created purely for co-op. Invite a friend to join for free with Friend''s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Play as the clashing couple Cody and May, two humans turned into dolls by a magic spell. Together, trapped in a fantastical world where the unpredictable hides around every corner, they are reluctantly challenged with saving their fractured relationship.', 3, 'Electronic Arts');
+--80
+insert into softwareTab values (softwareIdN.nextval, 'Need For Speed Hot Pursuit Remastered', to_date('2020.11.06', 'YYYY.MM.DD'), 29.99,  'Feel the thrill of the chase and the rush of escape in Need for Speed Hot Pursuit Remastered on PC. Unleash a savage sense of speed both as an outlaw and a cop in the world''s hottest high-performance cars. Outsmart the heat or take down lawbreakers with the tactical weaponry at your disposal in a heart-pumping, socially competitive racing experience.', 7, 'Electronic Arts');
+insert into softwareTab values (softwareIdN.nextval, 'Need For Speed Most Wanted', to_date('2020.06.18', 'YYYY.MM.DD'), 29.99,  'The open-world action in Need for Speed™ Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low, or head for terrain that plays to your vehicle''s unique strengths. Fight your way past cops and rivals using skill, high-end car tech, and tons of nitrous. It''s all about you, your friends, and a wild selection of cars. Let''s see what you can do.', 7, 'Electronic Arts');
+insert into softwareTab values (softwareIdN.nextval, 'Need For Speed Heat', to_date('2020.06.04', 'YYYY.MM.DD'), 69.99,  'A thrilling race experience pits you against a city''s rogue police force as you battle your way into street racing''s elite. Hustle by day and risk it all at night in Need for Speed™ Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set. By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready - cops are waiting and not all of them play fair.', 16, 'Electronic Arts');
+insert into softwareTab values (softwareIdN.nextval, 'METAL GEAR SOLID V: THE PHANTOM PAIN', to_date('2015.09.01', 'YYYY.MM.DD'), 29.99,  'Konami Digital Entertainment continues forth the "METAL GEAR SOLID V Experience" with the latest chapter, METAL GEAR SOLID V: The Phantom Pain. Ushering in a new era for the franchise with cutting-edge technology powered by the Fox Engine, MGSV: The Phantom Pain will provide players a first-rate gaming experience as they are offered tactical freedom to carry out open-world missions.', 18, 'Konami');
+--https://www.microsoft.com/en-ww/microsoft-365/products-apps-services
+insert into softwareTab values (softwareIdN.nextval, 'Access', to_date('1992.11.01', 'YYYY.MM.DD'), 0.0,  'Microsoft Access is a database management system from Microsoft that combines the relational Access Database Engine with a graphical user interface and software-development tools. It is a member of the Microsoft 365 suite of applications, included in the Professional and higher editions or sold separately.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'Defender', to_date('2006.02.13', 'YYYY.MM.DD'), 0.0,  'As threats become more complex and persistent, alerts increase, and security teams are overwhelmed. Microsoft 365 Defender, part of Microsoft''s XDR solution, leverages the Microsoft 365 security portfolio to automatically analyze threat data across domains, building a complete picture of each attack in a single dashboard. With this breadth and depth of clarity defenders can now focus on critical threats and hunt for sophisticated breaches, trusting that the powerful automation in Microsoft 365 Defender detects and stops attacks anywhere in the kill chain and returns the organization to a secure state.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'Excel', to_date('1985.09.30', 'YYYY.MM.DD'), 0.0,  'Enhanced by intelligence for experts and novices. Excel learns your patterns, organizing your data to save you time. Easily create spreadsheets from templates or on your own and use modern formulas to perform calculations.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'Word', to_date('1983.10.25', 'YYYY.MM.DD'), 0.0,  'Use Microsoft Word for the best word processing and document creation.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'Powerpoint', to_date('1987.04.20', 'YYYY.MM.DD'), 0.0,  'Designing slides has never been easier. Create well-designed, impactful slides with the help of Designer and Ideas in PowerPoint.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'OneNote', to_date('2012.07.16', 'YYYY.MM.DD'), 0.0,  'Your world, organized. Get organized in notebooks you can divide into sections and pages. With easy navigation and search, you''ll always find your notes right where you left them.', 3, 'Microsoft');
+--90
+insert into softwareTab values (softwareIdN.nextval, 'Skype', to_date('2003.08.29', 'YYYY.MM.DD'), 0.0,  'Skype keeps the world talking. Say “hello” with an instant message, voice or video call - all for free, no matter what device they use Skype on.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'Cloud PC', to_date('2021.08.02', 'YYYY.MM.DD'), 0.0,  'Hybrid Windows for a hybrid world. Windows 365 combines the power and security of the cloud with the versatility and simplicity of the PC. From contractors and interns to software developers and industrial designers, Windows 365 enables a variety of new scenarios for the new world of work.', 3, 'Microsoft');
+insert into softwareTab values (softwareIdN.nextval, 'Publisher', to_date('1993.07.12', 'YYYY.MM.DD'), 0.0,  'Create polished, professional layouts without the hassle. Precisely layout and style text, pictures, borders, calendars, and more. In Publisher everything you add stays exactly the way you''ve designed it, in print, online, or in an email.', 3, 'Microsoft');
+/*
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+insert into softwareTab values (softwareIdN.nextval, 'name', to_date('YYYY.MM.DD', 'YYYY.MM.DD'), E.C,  'description', ageRating, 'publisherName');
+--100
+*/
 
 commit;
 
@@ -426,8 +462,18 @@ insert into expandsTab values(56, 61);
 insert into expandsTab values(62, 63);
 insert into expandsTab values(62, 64);
 insert into expandsTab values(62, 65);
-insert into expandsTab values(62, 66);
 
+insert into expandsTab values(62, 66);
+insert into expandsTab values(70, 71);
+insert into expandsTab values(70, 72);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
+insert into expandsTab values(basegame, dlc);
 
 commit;
 
