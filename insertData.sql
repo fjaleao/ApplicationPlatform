@@ -466,6 +466,8 @@ insert into expandsTab values(62, 65);
 insert into expandsTab values(62, 66);
 insert into expandsTab values(70, 71);
 insert into expandsTab values(70, 72);
+insert into expandsTab values(76, 77);
+/*
 insert into expandsTab values(basegame, dlc);
 insert into expandsTab values(basegame, dlc);
 insert into expandsTab values(basegame, dlc);
@@ -473,7 +475,7 @@ insert into expandsTab values(basegame, dlc);
 insert into expandsTab values(basegame, dlc);
 insert into expandsTab values(basegame, dlc);
 insert into expandsTab values(basegame, dlc);
-insert into expandsTab values(basegame, dlc);
+*/
 
 commit;
 
